@@ -5,7 +5,9 @@ RUN /usr/bin/curl -L -k -o /tmp/flink-sql-connector-mysql-cdc-1.4.0.jar https://
     /usr/bin/curl -L -k -o /tmp/flink-sql-connector-postgres-cdc-1.4.0.jar https://repo1.maven.org/maven2/com/alibaba/ververica/flink-sql-connector-postgres-cdc/1.4.0/flink-sql-connector-postgres-cdc-1.4.0.jar && \
     /usr/bin/curl -L -k -o /tmp/flink-format-changelog-json-1.4.0.jar https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
     /usr/bin/curl -L -k -o /tmp/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar https://repo.maven.apache.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
+    /usr/bin/curl -L -k -o /tmp/mysql-connector-java-8.0.27.jar https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar && \
     mv /tmp/flink-sql-connector-mysql-cdc-1.4.0.jar /opt/flink/lib/ && \
     mv /tmp/flink-sql-connector-postgres-cdc-1.4.0.jar /opt/flink/lib/ && \
     mv /tmp/flink-format-changelog-json-1.4.0.jar /opt/flink/lib/ && \
-    mv /tmp/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar /opt/flink/lib/ \
+    mv /tmp/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar /opt/flink/lib/ && \
+    mv /tmp/mysql-connector-java-8.0.27.jar /opt/flink/lib/
