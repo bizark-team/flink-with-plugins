@@ -9,4 +9,3 @@ RUN /usr/bin/curl -L -k -o /tmp/flink-sql-connector-mysql-cdc-1.4.0.jar https://
     mv /tmp/flink-sql-connector-postgres-cdc-1.4.0.jar /opt/flink/lib/ && \
     mv /tmp/flink-format-changelog-json-1.4.0.jar /opt/flink/lib/ && \
     mv /tmp/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar /opt/flink/lib/ \
-
