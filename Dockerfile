@@ -13,4 +13,4 @@ RUN /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-jdbc_2.12-1.13.3.jar h
     /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-rabbitmq_2.12-1.13.3.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-rabbitmq_2.12/1.13.3/flink-connector-rabbitmq_2.12-1.13.3.jar && \
     /usr/bin/curl -L -k -o /opt/flink/lib/amqp-client-5.9.0.jar https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.9.0/amqp-client-5.9.0.jar && \
     /usr/bin/curl -L -k -o /opt/flink/lib/flink-format-changelog-json-1.4.0.jar https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
-    /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-files-1.13.3.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar \
+    /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-files-1.13.3.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar
