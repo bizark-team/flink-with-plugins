@@ -31,4 +31,4 @@ RUN /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/ap
 COPY sql-client/bin/* /opt/sql-client/bin/
 COPY sql-client/conf/* /opt/sql-client/conf/
 
-RUN ln -nfs /opt/flink_addon_libs/*.jar /opt/flink/lib/ && ln -nfs /opt/flink_addon_libs/*.jar /opt/sql-client/lib/
+RUN chmod +x /opt/sql-client/bin/*.sh && ln -nfs /opt/flink_addon_libs/*.jar /opt/flink/lib/ && ln -nfs /opt/flink_addon_libs/*.jar /opt/sql-client/lib/
