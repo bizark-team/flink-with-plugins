@@ -22,6 +22,13 @@ RUN /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/ap
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-elasticsearch7_2.12/1.13.3/flink-connector-elasticsearch7_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.5.1/elasticsearch-rest-high-level-client-7.5.1.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/7.5.1/elasticsearch-rest-client-7.5.1.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.12/httpcore-4.4.12.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.12/httpcore-nio-4.4.12.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-rabbitmq_2.12/1.13.3/flink-connector-rabbitmq_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.9.0/amqp-client-5.9.0.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-redis_2.11/1.1.5/flink-connector-redis_2.11-1.1.5.jar && \
