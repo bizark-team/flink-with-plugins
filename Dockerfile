@@ -12,5 +12,7 @@ RUN /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-jdbc_2.12-1.13.3.jar h
     /usr/bin/curl -L -k -o /opt/flink/lib/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
     /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-rabbitmq_2.12-1.13.3.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-rabbitmq_2.12/1.13.3/flink-connector-rabbitmq_2.12-1.13.3.jar && \
     /usr/bin/curl -L -k -o /opt/flink/lib/amqp-client-5.9.0.jar https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.9.0/amqp-client-5.9.0.jar && \
+    /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-redis_2.11-1.1.5.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-redis_2.11/1.1.5/flink-connector-redis_2.11-1.1.5.jar && \
     /usr/bin/curl -L -k -o /opt/flink/lib/flink-format-changelog-json-1.4.0.jar https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
+    /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-filesystem_2.12-1.11.4.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-filesystem_2.12/1.11.4/flink-connector-filesystem_2.12-1.11.4.jar && \
     /usr/bin/curl -L -k -o /opt/flink/lib/flink-connector-files-1.13.3.jar https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar
