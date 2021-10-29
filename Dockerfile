@@ -23,6 +23,7 @@ RUN /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/ap
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.5.1/elasticsearch-rest-high-level-client-7.5.1.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/7.5.1/elasticsearch-rest-client-7.5.1.jar && \
+    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/elasticsearch-x-content/7.5.1/elasticsearch-x-content-7.5.1.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar && \
     /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10.jar && \
