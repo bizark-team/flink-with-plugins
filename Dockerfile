@@ -1,11 +1,11 @@
 FROM flink:1.13-java8
 MAINTAINER Nick Fan "nickfan81@gmail.com"
 
-# install python3 and pip3
-RUN apt-get update -y && apt-get install -y python3 python3-pip python3-dev && rm -rf /var/lib/apt/lists/*
-RUN ln -s /usr/bin/python3 /usr/bin/python
-# install Python Flink
-RUN python -m pip install --upgrade pip && python -m pip install apache-flink==1.13.3
+## install python3 and pip3
+#RUN apt-get update -y && apt-get install -y python3 python3-pip python3-dev && rm -rf /var/lib/apt/lists/*
+#RUN ln -s /usr/bin/python3 /usr/bin/python
+## install Python Flink
+#RUN python -m pip install --upgrade pip && python -m pip install apache-flink==1.13.3
 
 RUN mkdir -p /opt/{flink_addon_libs,sql-client/{bin,lib,conf}}
 ENV SQL_CLIENT_HOME /opt/sql-client
