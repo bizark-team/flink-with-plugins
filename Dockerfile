@@ -9,35 +9,36 @@ SHELL ["/bin/bash", "-c"]
 ## install Python Flink
 #RUN python -m pip install --upgrade pip && python -m pip install apache-flink==1.13.3
 
-RUN mkdir -p /opt/{flink_addon_libs,sql-client/{bin,lib,conf,opt}}
+RUN mkdir -p /opt/sql-client/{bin,conf,lib}
 ENV SQL_CLIENT_HOME /opt/sql-client
-RUN /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.13.3/flink-connector-jdbc_2.12-1.13.3.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/com/alibaba/ververica/flink-sql-connector-mysql-cdc/1.4.0/flink-sql-connector-mysql-cdc-1.4.0.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.24/postgresql-42.2.24.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/com/alibaba/ververica/flink-sql-connector-postgres-cdc/1.4.0/flink-sql-connector-postgres-cdc-1.4.0.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-kafka_2.12/1.13.3/flink-connector-kafka_2.12-1.13.3.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-kafka_2.12/1.13.3/flink-sql-connector-kafka_2.12-1.13.3.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.5.1/kafka-clients-2.5.1.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-elasticsearch7_2.12/1.13.3/flink-connector-elasticsearch7_2.12-1.13.3.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.5.1/elasticsearch-rest-high-level-client-7.5.1.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/7.5.1/elasticsearch-rest-client-7.5.1.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/elasticsearch/elasticsearch-x-content/7.5.1/elasticsearch-x-content-7.5.1.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.12/httpcore-4.4.12.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.jar && \
-#    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.12/httpcore-nio-4.4.12.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-rabbitmq_2.12/1.13.3/flink-connector-rabbitmq_2.12-1.13.3.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.9.0/amqp-client-5.9.0.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-redis_2.11/1.1.5/flink-connector-redis_2.11-1.1.5.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-filesystem_2.12/1.11.4/flink-connector-filesystem_2.12-1.11.4.jar && \
-    /usr/bin/wget -P /opt/flink_addon_libs https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar
+RUN /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.13.3/flink-connector-jdbc_2.12-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/com/alibaba/ververica/flink-sql-connector-mysql-cdc/1.4.0/flink-sql-connector-mysql-cdc-1.4.0.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.24/postgresql-42.2.24.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/com/alibaba/ververica/flink-sql-connector-postgres-cdc/1.4.0/flink-sql-connector-postgres-cdc-1.4.0.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-kafka_2.12/1.13.3/flink-connector-kafka_2.12-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-kafka_2.12/1.13.3/flink-sql-connector-kafka_2.12-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.5.1/kafka-clients-2.5.1.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-elasticsearch7_2.12/1.13.3/flink-connector-elasticsearch7_2.12-1.13.3.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.5.1/elasticsearch-rest-high-level-client-7.5.1.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/7.5.1/elasticsearch-rest-client-7.5.1.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/elasticsearch/elasticsearch-x-content/7.5.1/elasticsearch-x-content-7.5.1.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.12/httpcore-4.4.12.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.jar && \
+#    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.12/httpcore-nio-4.4.12.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-rabbitmq_2.12/1.13.3/flink-connector-rabbitmq_2.12-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.9.0/amqp-client-5.9.0.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-redis_2.11/1.1.5/flink-connector-redis_2.11-1.1.5.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-filesystem_2.12/1.11.4/flink-connector-filesystem_2.12-1.11.4.jar && \
+    /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar
 
 COPY sql-client/bin/* /opt/sql-client/bin/
 COPY sql-client/conf/* /opt/sql-client/conf/
 
-RUN chmod +x /opt/sql-client/bin/*.sh && ln -nfs /opt/flink_addon_libs/*.jar /opt/flink/lib/ && ln -nfs /opt/flink_addon_libs/*.jar /opt/sql-client/lib/
+RUN chmod +x /opt/sql-client/bin/*.sh
+
