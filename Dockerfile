@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-c"]
 ## install Python Flink
 #RUN python -m pip install --upgrade pip && python -m pip install apache-flink==1.13.3
 
-RUN mkdir -p /opt/sql-client/{bin,conf,lib}
+RUN mkdir -p /opt/{client_lib,sql-client/{bin,conf}}
 ENV SQL_CLIENT_HOME /opt/sql-client
 RUN /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.13.3/flink-connector-jdbc_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink/opt https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar && \
