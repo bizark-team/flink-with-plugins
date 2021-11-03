@@ -42,7 +42,7 @@ RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/fl
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-filesystem_2.12/1.11.4/flink-connector-filesystem_2.12-1.11.4.jar
 
 COPY client/bin/* /opt/client/bin/
-COPY client/conf/* /opt/client/conf/
+COPY client/conf/* /opt/flink/conf/
 
 RUN chmod +x /opt/client/bin/*.sh
 
