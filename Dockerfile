@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-c"]
 ## install Python Flink
 #RUN python -m pip install --upgrade pip && python -m pip install apache-flink==1.13.3
 
-RUN mkdir -p /opt/{flink_lib,client/{bin,conf}}
+RUN mkdir -p /opt/{flink/opt/addons,client/{bin,conf}}
 ENV CLIENT_HOME /opt/sql-client
 RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
