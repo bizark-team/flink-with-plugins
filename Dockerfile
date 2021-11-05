@@ -14,6 +14,7 @@ ENV CLIENT_HOME /opt/client
 RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.14.0/flink-connector-files-1.14.0.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/ververica/flink-format-changelog-json/2.0.2/flink-format-changelog-json-2.0.2.jar && \
+    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-compatibility_2.12/1.14.0/flink-hadoop-compatibility_2.12-1.14.0.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-fs/1.14.0/flink-hadoop-fs-1.14.0.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repository.cloudera.com/artifactory/cloudera-repos/org/apache/flink/flink-shaded-hadoop-3-uber/3.1.1.7.2.9.0-173-9.0/flink-shaded-hadoop-3-uber-3.1.1.7.2.9.0-173-9.0.jar && \
