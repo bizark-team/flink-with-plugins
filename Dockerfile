@@ -13,7 +13,7 @@ RUN mkdir -p /opt/{flink/opt/addons,client/{bin,data,conf}}
 ENV CLIENT_HOME /opt/client
 RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.14.0/flink-connector-files-1.14.0.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
-    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/ververica/flink-format-changelog-json/2.0.2/flink-format-changelog-json-2.0.2.jar && \
+#    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/ververica/flink-format-changelog-json/2.0.2/flink-format-changelog-json-2.0.2.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-compatibility_2.12/1.14.0/flink-hadoop-compatibility_2.12-1.14.0.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-fs/1.14.0/flink-hadoop-fs-1.14.0.jar && \
