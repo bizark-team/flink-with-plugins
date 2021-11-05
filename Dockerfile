@@ -12,6 +12,7 @@ SHELL ["/bin/bash", "-c"]
 RUN mkdir -p /opt/{flink/opt/addons,client/{bin,data,conf}}
 ENV CLIENT_HOME /opt/client
 RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-files/1.13.3/flink-connector-files-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/ververica/flink-format-changelog-json/2.0.2/flink-format-changelog-json-2.0.2.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-hive-3.1.2_2.12/1.13.3/flink-sql-connector-hive-3.1.2_2.12-1.13.3.jar && \
