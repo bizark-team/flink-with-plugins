@@ -16,6 +16,7 @@ RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/fl
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/alibaba/ververica/flink-format-changelog-json/1.4.0/flink-format-changelog-json-1.4.0.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/ververica/flink-format-changelog-json/2.0.2/flink-format-changelog-json-2.0.2.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-hive-3.1.2_2.12/1.13.3/flink-sql-connector-hive-3.1.2_2.12-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-hive_2.12/1.13.3/flink-connector-hive_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.13.3/flink-connector-jdbc_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/alibaba/ververica/flink-sql-connector-mysql-cdc/1.4.0/flink-sql-connector-mysql-cdc-1.4.0.jar && \
@@ -27,8 +28,8 @@ RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/fl
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-kafka_2.12/1.13.3/flink-sql-connector-kafka_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.5.1/kafka-clients-2.5.1.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-elasticsearch7_2.12/1.13.3/flink-sql-connector-elasticsearch7_2.12-1.13.3.jar && \
-#    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-elasticsearch7_2.12/1.13.3/flink-connector-elasticsearch7_2.12-1.13.3.jar && \
-#    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.5.1/elasticsearch-rest-high-level-client-7.5.1.jar && \
+    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-elasticsearch7_2.12/1.13.3/flink-connector-elasticsearch7_2.12-1.13.3.jar && \
+    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-high-level-client/7.5.1/elasticsearch-rest-high-level-client-7.5.1.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/7.5.1/elasticsearch-rest-client-7.5.1.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/elasticsearch/elasticsearch-x-content/7.5.1/elasticsearch-x-content-7.5.1.jar && \
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar && \
@@ -39,7 +40,7 @@ RUN /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/fl
 #    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.12/httpcore-nio-4.4.12.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-rabbitmq_2.12/1.13.3/flink-connector-rabbitmq_2.12-1.13.3.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.9.0/amqp-client-5.9.0.jar && \
-    /usr/bin/wget -P /opt/flink/lib https://repository.cloudera.com/artifactory/cloudera-repos/org/apache/flink/flink-shaded-hadoop-3-uber/3.1.1.7.2.9.0-173-9.0/flink-shaded-hadoop-3-uber-3.1.1.7.2.9.0-173-9.0.jar && \
+    /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-hadoop2-uber/2.8.3-1.8.3/flink-shaded-hadoop2-uber-2.8.3-1.8.3.jar && \
     /usr/bin/wget -P /opt/flink/lib https://repo1.maven.org/maven2/org/apache/flink/flink-connector-filesystem_2.12/1.11.4/flink-connector-filesystem_2.12-1.11.4.jar
 
 COPY client/bin/* /opt/client/bin/
